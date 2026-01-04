@@ -1040,26 +1040,21 @@ footer {
   to { transform: rotate(360deg); }
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .tech-stack {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* ===== IMPROVED PHONE-FRIENDLY RESPONSIVE DESIGN ===== */
 
+/* Enhanced Mobile Navigation */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.2rem;
+  .nav-container {
+    padding: 1rem 20px;
   }
   
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 2rem;
+  .logo {
+    font-size: 1.6rem;
+    padding-left: 2rem;
+  }
+  
+  .logo::before {
+    font-size: 1.4rem;
   }
   
   .nav-links {
@@ -1069,186 +1064,91 @@ footer {
     right: 0;
     background: var(--surface);
     flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    box-shadow: var(--shadow);
+    padding: 1.5rem 20px;
+    gap: 1rem;
+    box-shadow: var(--shadow-lg);
     transform: translateY(-100%);
     opacity: 0;
-    transition: var(--transition);
-    z-index: 999;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   
   .nav-links.active {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-links a {
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    margin: 0.2rem 0;
+  }
+  
+  .nav-links a:hover {
+    background: rgba(22, 163, 74, 0.15);
+  }
+  
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    margin: 0.5rem auto;
+    font-size: 1.1rem;
   }
   
   .menu-toggle {
-    display: block;
-  }
-  
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .skills-container {
-    grid-template-columns: 1fr;
-  }
-  
-  .stats {
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .timeline::before {
-    left: 20px;
-  }
-  
-  .timeline-date {
-    flex: 0 0 90px;
-    font-size: 0.9rem;
-    padding-left: 15px;
-  }
-  
-  .timeline-content {
-    padding: 1rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .achievement-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-  
-  .hero-buttons {
-    flex-direction: column;
-  }
-  
-  .btn {
-    justify-content: center;
-  }
-  
-  .tech-stack {
-    grid-template-columns: 1fr;
-  }
-  
-  .section-title {
-    font-size: 1.8rem;
-  }
-  
-  .stats {
-    flex-direction: column;
+    display: flex;
     align-items: center;
-  }
-}
-/* Add these styles to your style.css file */
-
-/* Enhanced Hero Section */
-.hero-intro {
-  margin-bottom: 2.5rem;
-}
-
-.hero-title {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(90deg, var(--text) 0%, var(--accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle {
-  font-size: 1.8rem;
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.hero-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-}
-
-.hero-description strong {
-  color: var(--accent);
-  font-weight: 600;
-}
-
-.hero-stats {
-  display: flex;
-  justify-content: space-between;
-  margin: 2.5rem 0;
-  padding: 2rem;
-  background: var(--gradient-surface);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  box-shadow: var(--card-shadow);
-}
-
-.hero-stats .stat {
-  text-align: center;
-  flex: 1;
-}
-
-.hero-stats .stat-number {
-  display: block;
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 1;
-}
-
-.hero-stats .stat-label {
-  color: var(--text);
-  font-size: 0.95rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-
-/* Updated About Section text */
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-light);
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.6rem;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
   }
 }
 
+/* Improved Hero Section for Mobile */
 @media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px 40px;
+    min-height: auto;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
   }
   
   .hero-subtitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
   }
   
   .hero-stats {
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 1.2rem;
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
   }
   
   .hero-stats .stat {
@@ -1256,20 +1156,501 @@ footer {
   }
   
   .hero-stats .stat-number {
-    font-size: 2.2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
     font-size: 2rem;
   }
   
-  .hero-subtitle {
+  .hero-stats .stat-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .tech-stack {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .tech-item {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .scroll-indicator {
+    display: none; /* Remove on mobile for better UX */
+  }
+}
+
+/* Enhanced Sections for Mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 0 15px;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Improved About Section for Mobile */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-card {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .about-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .about-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+}
+
+/* Enhanced Skills Section for Mobile */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skill-category {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .skill-category h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .skill {
+    margin-bottom: 1.2rem;
+  }
+  
+  .skill span {
+    font-size: 0.95rem;
+  }
+  
+  .skill-tags {
+    gap: 0.4rem;
+  }
+  
+  .tag {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Optimized Projects Section for Mobile */
+@media (max-width: 768px) {
+  .project-swiper {
+    padding: 1rem 0 2rem;
+  }
+  
+  .project-card {
+    height: auto;
+    min-height: 380px;
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+  
+  .project-header h4 {
+    font-size: 1.4rem;
+  }
+  
+  .project-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .project-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .project-tech {
+    gap: 0.4rem;
+  }
+  
+  .project-tech span {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .project-link {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none; /* Hide navigation arrows on mobile */
+  }
+  
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+  }
+}
+
+/* Enhanced Experience Timeline for Mobile */
+@media (max-width: 768px) {
+  .timeline {
+    margin: 0;
+  }
+  
+  .timeline::before {
+    left: 15px;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+  }
+  
+  .timeline-date {
+    flex: none;
+    width: 100%;
+    padding-left: 40px;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+  
+  .timeline-date::before {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .timeline-content {
+    padding: 1.2rem;
+    margin-left: 0;
+  }
+  
+  .timeline-content h4 {
     font-size: 1.2rem;
   }
   
-  .hero-description {
+  .company {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-list {
+    padding-left: 0;
+  }
+  
+  .timeline-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.4rem;
+    padding-left: 1.2rem;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateY(0);
+  }
+  
+  .achievements {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .achievements-title {
+    font-size: 1.3rem;
+  }
+  
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .achievement-card {
+    padding: 1.2rem;
+  }
+  
+  .achievement-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Improved Contact Section for Mobile */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .contact-info {
+    gap: 1.5rem;
+  }
+  
+  .contact-item {
+    gap: 0.8rem;
+  }
+  
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  
+  .contact-item h4 {
     font-size: 1rem;
+  }
+  
+  .contact-item a,
+  .contact-item p {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .form-group label {
+    font-size: 0.95rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+  
+  .form-status {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+}
+
+/* Enhanced Footer for Mobile */
+@media (max-width: 768px) {
+  footer {
+    padding: 2rem 0;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+    padding: 0 15px;
+  }
+}
+
+/* Extra Small Device Optimizations */
+@media (max-width: 480px) {
+  /* Typography adjustments */
+  h1, h2, h3, h4 {
+    line-height: 1.3;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Touch-friendly button sizes */
+  .btn {
+    min-height: 48px; /* Minimum touch target size */
+  }
+  
+  /* Improved spacing */
+  .section {
+    padding: 2.5rem 0;
+  }
+  
+  /* Better form inputs for touch */
+  .form-group input,
+  .form-group textarea {
+    min-height: 48px;
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+  
+  /* Timeline adjustments */
+  .timeline-date::before {
+    width: 16px;
+    height: 16px;
+  }
+  
+  /* Card adjustments */
+  .about-card,
+  .skill-category,
+  .project-card,
+  .timeline-content,
+  .achievement-card,
+  .contact-form {
+    border-radius: 10px;
+  }
+  
+  /* Better scroll behavior */
+  html {
+    scroll-padding-top: 70px; /* Account for fixed header */
+  }
+  
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Improve touch scrolling */
+  .nav-links,
+  .swiper-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Landscape Mode Optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 70px;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+  }
+  
+  .hero-text {
+    max-height: 60vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-links {
+    max-height: 70vh;
+  }
+  
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* High DPI Screen Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Improve image/text sharpness */
+  .hero-title,
+  .logo {
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Safe Area Insets for Modern Phones (iPhone X+ etc.) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .nav {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .hero {
+    padding-left: max(20px, env(safe-area-inset-left));
+    padding-right: max(20px, env(safe-area-inset-right));
+  }
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .tech-item:hover,
+  .about-card:hover,
+  .project-card:hover,
+  .timeline-content:hover {
+    transform: none !important;
+  }
+  
+  .scroll-indicator,
+  .btn-primary {
+    animation: none !important;
   }
 }
