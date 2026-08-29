@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sorraya Mae Jaafar | Web Developer & IT Specialist</title>
-  <meta name="description" content="Web Developer & IT Specialist with experience in construction and energy sector websites. Building responsive, performance-driven digital solutions.">
+  <title>Freelance Web Developer for Small Businesses | Sorraya Mae Jaafar</title>
+  <meta name="description" content="Freelance web developer building modern, responsive websites for small businesses. Specializing in business websites, landing pages, and website redesign in the Philippines.">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Freelance Web Developer for Small Businesses | Sorraya Mae Jaafar" />
+  <meta property="og:description" content="Modern, responsive websites for small businesses. Landing pages, redesign, and maintenance." />
+  <meta property="og:type" content="website" />
 </head>
 <body>
     <div class="loading-screen" id="loadingScreen">
@@ -22,10 +26,10 @@
         <i class="fas fa-bars"></i>
       </button>
       <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
+        <a href="#why-me">Why Me</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <button class="theme-toggle" aria-label="Toggle dark mode">
           <i class="fas fa-moon"></i>
@@ -40,9 +44,9 @@
       <div class="hero-text">
         <div class="hero-intro">
           <h2 class="hero-title">Sorraya Mae Jaafar</h2>
-          <h3 class="hero-subtitle">Web Developer & IT Specialist</h3>
+          <h3 class="hero-subtitle">Freelance Web Developer for Small Businesses</h3>
           <p class="hero-description">
-            I'm a BS Information Technology graduate combining <strong>technical development skills</strong> with <strong>real-world business experience</strong> in real estate and corporate environments. I specialize in creating digital solutions that address specific business challenges while maintaining technical excellence.
+            I build modern, responsive, and business-focused websites that help small businesses grow. From landing pages to full business sites, I create professional online presence that works.
           </p>
         </div>
         
@@ -62,10 +66,8 @@
         </div>
         
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Portfolio</a>
-          <a href="Sorraya_Mae_Jaafar_Resume.pdf" class="btn btn-secondary" download>
-            <i class="fas fa-download"></i> Download Resume
-          </a>
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Start a Project</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -82,10 +84,144 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section fade-in">
+  <!-- Services Section -->
+  <section id="services" class="section fade-in">
     <div class="container">
-      <h3 class="section-title">Professional Profile</h3>
+      <h3 class="section-title">What I Can Build</h3>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <h4>Business Websites</h4>
+          <p>Professional, responsive websites that showcase your services and build trust with your customers.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h4>Landing Pages</h4>
+          <p>High-converting landing pages designed to capture leads and promote your products or services.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+          <h4>Website Redesign</h4>
+          <p>Give your existing website a fresh, modern look with improved user experience and performance.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h4>Website Maintenance</h4>
+          <p>Keep your website secure, up-to-date, and running smoothly with ongoing maintenance and support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section with Swiper -->
+  <section id="projects" class="section gray fade-in">
+    <div class="container">
+      <h3 class="section-title">Featured Projects</h3>
+      <div class="swiper project-swiper">
+        <div class="swiper-wrapper">
+          <!-- Project 1 -->
+          <div class="swiper-slide project-card">
+            <div class="project-image-placeholder">
+              <span>Project Screenshot</span>
+            </div>
+            <div class="project-header">
+              <div class="project-badge">Corporate Website</div>
+              <h4>Aecons Design</h4>
+              <p class="project-subtitle">Architecture & Construction Firm</p>
+            </div>
+            <div class="project-body">
+              <p><strong>Goal:</strong> Showcase architectural projects and generate leads.</p>
+              <p><strong>What I built:</strong> Fully responsive corporate website with modern UI/UX, smooth animations, and optimized performance.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Swiper.js</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://www.aeconsdesign.com/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Live Website
+              </a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="swiper-slide project-card">
+            <div class="project-image-placeholder">
+              <span>Project Screenshot</span>
+            </div>
+            <div class="project-header">
+              <div class="project-badge">Energy Sector</div>
+              <h4>Aenergy PH</h4>
+              <p class="project-subtitle">Solar Energy Solutions</p>
+            </div>
+            <div class="project-body">
+              <p><strong>Goal:</strong> Educate customers and drive inquiries for solar installations.</p>
+              <p><strong>What I built:</strong> Clean, conversion-focused website with product galleries, service explanations, and contact forms.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <a href="https://aenergyph.com/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> View Live Website
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Work With Me -->
+  <section id="why-me" class="section fade-in">
+    <div class="container">
+      <h3 class="section-title">Why Work With Me</h3>
+      <div class="why-grid">
+        <div class="why-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>Mobile Responsive</h4>
+          <p>Your website will look great on every device, from desktop to smartphone.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-paint-brush"></i>
+          <h4>Modern Design</h4>
+          <p>Clean, professional design that builds trust and reflects your brand.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-bullseye"></i>
+          <h4>Business-Focused</h4>
+          <p>I build websites that help you achieve your business goals, not just look pretty.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-comments"></i>
+          <h4>Clear Communication</h4>
+          <p>I explain things in plain language, so you always know what's happening.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-tachometer-alt"></i>
+          <h4>Performance-Conscious</h4>
+          <p>Fast loading times and smooth interactions for better user experience.</p>
+        </div>
+        <div class="why-item">
+          <i class="fas fa-cogs"></i>
+          <h4>Custom Solutions</h4>
+          <p>Every website is tailored to your specific needs, not a generic template.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section gray fade-in">
+    <div class="container">
+      <h3 class="section-title">About Me</h3>
       <div class="about-grid">
         <div class="about-card">
           <div class="about-icon">
@@ -111,218 +247,93 @@
       </div>
       <div class="about-text">
         <p>
-          With hands-on experience creating performant websites for construction and renewable energy sectors, I focus on building digital solutions that drive business growth. My background in both technical development and client-facing roles allows me to understand business needs while delivering technically excellent solutions.
+          I'm a BS Information Technology graduate with hands-on experience building websites for construction and renewable energy sectors. I combine technical skills with real-world business experience to create digital solutions that drive growth. Whether you need a new website, a redesign, or ongoing maintenance, I'm here to help.
         </p>
+        <a href="#contact" class="btn btn-primary" style="margin-top: 1.5rem;">Let's Work Together</a>
       </div>
     </div>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section gray fade-in">
+  <!-- Experience Timeline (secondary) -->
+  <section id="experience" class="section fade-in">
     <div class="container">
-      <h3 class="section-title">Technical Competencies</h3>
-      <div class="skills-container">
-        <div class="skill-category">
-          <h4>Frontend Development</h4>
-          <div class="skill">
-            <span>HTML/CSS</span>
-            <div class="progress-bar">
-              <div class="progress" data-width="95"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>JavaScript</span>
-            <div class="progress-bar">
-              <div class="progress" data-width="85"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Responsive Design</span>
-            <div class="progress-bar">
-              <div class="progress" data-width="90"></div>
-            </div>
+      <h3 class="section-title">Experience & Credentials</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2022 – Present</div>
+          <div class="timeline-content">
+            <h4>Property Specialist</h4>
+            <span class="company">New San Jose Builders Inc.</span>
+            <ul class="timeline-list">
+              <li>Managed client portfolios and conducted virtual property presentations</li>
+              <li>Collaborated with marketing teams to develop digital sales strategies</li>
+              <li>Achieved consistent quarterly sales targets through relationship building</li>
+              <li>Implemented digital tools to streamline client communication processes</li>
+            </ul>
           </div>
         </div>
-        <div class="skill-category">
-          <h4>Backend & Database</h4>
-          <div class="skill">
-            <span>PHP</span>
-            <div class="progress-bar">
-              <div class="progress" data-width="80"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>Python/Java</span>
-            <div class="progress-bar">
-              <div class="progress" data-width="75"></div>
-            </div>
-          </div>
-          <div class="skill">
-            <span>MySQL</span>
-            <div class="progress-bar">
-              <div class="progress" data-width="85"></div>
-            </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2025 (500 Hours)</div>
+          <div class="timeline-content">
+            <h4>IT Intern | Web Developer</h4>
+            <span class="company">Aecons Design</span>
+            <ul class="timeline-list">
+              <li>Developed and maintained fully responsive websites for Aecons Design and Aenergy PH</li>
+              <li>Created Google Apps Script automation that improved inventory tracking efficiency by 40%</li>
+              <li>Provided technical support for 150+ staff members across multiple departments</li>
+              <li>Researched and implemented accounting software solutions (QuickBooks, Zoho Books, etc.)</li>
+              <li>Created comprehensive technical documentation and tutorials for software systems</li>
+            </ul>
           </div>
         </div>
-        <div class="skill-category">
-          <h4>Professional Skills</h4>
-          <div class="skill-tags">
-            <span class="tag">IT Troubleshooting</span>
-            <span class="tag">Client Communication</span>
-            <span class="tag">Project Management</span>
-            <span class="tag">Git & Version Control</span>
-            <span class="tag">Google Apps Script</span>
-            <span class="tag">Cross-functional Collaboration</span>
+        <div class="timeline-item">
+          <div class="timeline-date">2020 (150 Hours)</div>
+          <div class="timeline-content">
+            <h4>IT Support Intern</h4>
+            <span class="company">Commission on Elections (COMELEC)</span>
+            <ul class="timeline-list">
+              <li>Assisted IT staff in system documentation and electoral preparation processes</li>
+              <li>Conducted system checks and troubleshooting for voting infrastructure</li>
+              <li>Enhanced practical knowledge of data handling and technical maintenance procedures</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="achievements">
+        <h4 class="achievements-title">Achievements & Certifications</h4>
+        <div class="achievement-grid">
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h5>500 Hours OJT</h5>
+            <p>Completed comprehensive IT internship program (2025)</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h5>150 Hours Internship</h5>
+            <p>COMELEC IT Support Internship (2020)</p>
+          </div>
+          <div class="achievement-card">
+            <div class="achievement-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h5>Excellence Recognition</h5>
+            <p>Recognized for initiative and quality technical research</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Projects Section with Swiper -->
-  <section id="projects" class="section fade-in">
-    <div class="container">
-      <h3 class="section-title">Featured Projects</h3>
-      <div class="swiper project-swiper">
-        <div class="swiper-wrapper">
-          <!-- Project 1 -->
-          <div class="swiper-slide project-card">
-            <div class="project-header">
-              <div class="project-badge">Corporate Website</div>
-              <h4>Aecons Design</h4>
-              <p class="project-subtitle">Architecture & Construction Firm</p>
-            </div>
-            <div class="project-body">
-              <p>
-                Developed a fully responsive corporate website showcasing architectural projects and services. Implemented modern UI/UX principles with smooth animations and optimized performance for lead generation.
-              </p>
-              <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Swiper.js</span>
-              </div>
-            </div>
-            <div class="project-footer">
-              <a href="https://www.aeconsdesign.com/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Live Site
-              </a>
-            </div>
-          </div>
-          <!-- Project 2 -->
-          <div class="swiper-slide project-card">
-            <div class="project-header">
-              <div class="project-badge">Energy Sector</div>
-              <h4>Aenergy PH</h4>
-              <p class="project-subtitle">Solar Energy Solutions</p>
-            </div>
-            <div class="project-body">
-              <p>
-                Built a clean, conversion-focused website for a solar energy company featuring product galleries, service explanations, and contact forms. Optimized for mobile devices and fast loading times.
-              </p>
-              <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>PHP</span>
-              </div>
-            </div>
-            <div class="project-footer">
-              <a href="https://aenergyph.com/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Visit Live Site
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Timeline -->
-<section id="experience" class="section gray fade-in">
-  <div class="container">
-    <h3 class="section-title">Professional Experience</h3>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-date">2022 – Present</div>
-        <div class="timeline-content">
-          <h4>Property Specialist</h4>
-          <span class="company">New San Jose Builders Inc.</span>
-          <ul class="timeline-list">
-            <li>Managed client portfolios and conducted virtual property presentations</li>
-            <li>Collaborated with marketing teams to develop digital sales strategies</li>
-            <li>Achieved consistent quarterly sales targets through relationship building</li>
-            <li>Implemented digital tools to streamline client communication processes</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2025 (500 Hours)</div>
-        <div class="timeline-content">
-          <h4>IT Intern | Web Developer</h4>
-          <span class="company">Aecons Design</span>
-          <ul class="timeline-list">
-            <li>Developed and maintained fully responsive websites for Aecons Design and Aenergy PH</li>
-            <li>Created Google Apps Script automation that improved inventory tracking efficiency by 40%</li>
-            <li>Provided technical support for 150+ staff members across multiple departments</li>
-            <li>Researched and implemented accounting software solutions (QuickBooks, Zoho Books, etc.)</li>
-            <li>Created comprehensive technical documentation and tutorials for software systems</li>
-          </ul>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2020 (150 Hours)</div>
-        <div class="timeline-content">
-          <h4>IT Support Intern</h4>
-          <span class="company">Commission on Elections (COMELEC)</span>
-          <ul class="timeline-list">
-            <li>Assisted IT staff in system documentation and electoral preparation processes</li>
-            <li>Conducted system checks and troubleshooting for voting infrastructure</li>
-            <li>Enhanced practical knowledge of data handling and technical maintenance procedures</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-    <!-- Achievements Section -->
-    <div class="achievements">
-      <h4 class="achievements-title">Achievements & Certifications</h4>
-      <div class="achievement-grid">
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h5>500 Hours OJT</h5>
-          <p>Completed comprehensive IT internship program (2025)</p>
-        </div>
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-award"></i>
-          </div>
-          <h5>150 Hours Internship</h5>
-          <p>COMELEC IT Support Internship (2020)</p>
-        </div>
-        <div class="achievement-card">
-          <div class="achievement-icon">
-            <i class="fas fa-star"></i>
-          </div>
-          <h5>Excellence Recognition</h5>
-          <p>Recognized for initiative and quality technical research</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- Contact Section -->
-<section id="contact" class="section fade-in">
+<section id="contact" class="section gray fade-in">
   <div class="container">
-    <h3 class="section-title">Get In Touch</h3>
+    <h3 class="section-title">Have a Website Idea? Let's Build It.</h3>
+    <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);">Whether you need a new website, a redesign, a landing page, or maintenance — I'm here to help. Let's talk about your project.</p>
     <div class="contact-grid">
       <div class="contact-info">
         <div class="contact-item">
@@ -353,7 +364,6 @@
           </div>
         </div>
       </div>
-      <!-- UPDATED FORM WITH WORKING FORMSPREE AJAX -->
       <form class="contact-form" id="contactForm" action="https://formspree.io/f/xblybbpj" method="POST">
         <div class="form-group">
           <label for="name">Name *</label>
@@ -365,7 +375,7 @@
         </div>
         <div class="form-group">
           <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me about your website project..."></textarea>
         </div>
         <button type="submit" class="btn btn-primary">
           <i class="fas fa-paper-plane"></i> Send Message
@@ -375,11 +385,11 @@
     </div>
   </div>
 </section>
+
   <!-- Footer -->
   <footer>
     <div class="container">
       <p class="footer-text">© 2026 Sorraya Mae Jaafar. All rights reserved.</p>
-      
     </div>
   </footer>
 
